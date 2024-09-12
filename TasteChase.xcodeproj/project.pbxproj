@@ -15,6 +15,9 @@
 		9830B8B82C93420500C3E6ED /* MealDetailDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9830B8B72C93420500C3E6ED /* MealDetailDataModel.swift */; };
 		9841FA702C934F6300839B6C /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841FA6F2C934F6300839B6C /* NetworkConstants.swift */; };
 		9841FA732C93537900839B6C /* MealCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841FA722C93537900839B6C /* MealCellView.swift */; };
+		9841FA762C93914300839B6C /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841FA752C93914300839B6C /* MealViewModel.swift */; };
+		9841FA792C9394D300839B6C /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841FA782C9394D300839B6C /* NetworkServices.swift */; };
+		9841FA7B2C9394F400839B6C /* HTTPErrorModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841FA7A2C9394F400839B6C /* HTTPErrorModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		9830B8B72C93420500C3E6ED /* MealDetailDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailDataModel.swift; sourceTree = "<group>"; };
 		9841FA6F2C934F6300839B6C /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		9841FA722C93537900839B6C /* MealCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCellView.swift; sourceTree = "<group>"; };
+		9841FA752C93914300839B6C /* MealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
+		9841FA782C9394D300839B6C /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
+		9841FA7A2C9394F400839B6C /* HTTPErrorModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPErrorModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +66,11 @@
 		980A4D742C933957000C08C4 /* TasteChase */ = {
 			isa = PBXGroup;
 			children = (
+				9841FA772C9394C700839B6C /* Services */,
 				9841FA6C2C934F1A00839B6C /* Constants */,
 				9830B8B42C9341DE00C3E6ED /* Model */,
 				9841FA712C93524700839B6C /* View */,
+				9841FA742C93913300839B6C /* ViewModel */,
 				980A4D752C933957000C08C4 /* TasteChaseApp.swift */,
 				980A4D792C933959000C08C4 /* Assets.xcassets */,
 				980A4D7B2C933959000C08C4 /* TasteChase.entitlements */,
@@ -84,6 +92,7 @@
 			children = (
 				9830B8B52C9341FC00C3E6ED /* MealDataModel.swift */,
 				9830B8B72C93420500C3E6ED /* MealDetailDataModel.swift */,
+				9841FA7A2C9394F400839B6C /* HTTPErrorModels.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,6 +112,22 @@
 				9841FA722C93537900839B6C /* MealCellView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9841FA742C93913300839B6C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9841FA752C93914300839B6C /* MealViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9841FA772C9394C700839B6C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9841FA782C9394D300839B6C /* NetworkServices.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,10 +201,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9830B8B62C9341FD00C3E6ED /* MealDataModel.swift in Sources */,
+				9841FA762C93914300839B6C /* MealViewModel.swift in Sources */,
 				9830B8B82C93420500C3E6ED /* MealDetailDataModel.swift in Sources */,
 				9841FA702C934F6300839B6C /* NetworkConstants.swift in Sources */,
 				980A4D782C933957000C08C4 /* HomeView.swift in Sources */,
+				9841FA7B2C9394F400839B6C /* HTTPErrorModels.swift in Sources */,
 				980A4D762C933957000C08C4 /* TasteChaseApp.swift in Sources */,
+				9841FA792C9394D300839B6C /* NetworkServices.swift in Sources */,
 				9841FA732C93537900839B6C /* MealCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
