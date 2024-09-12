@@ -8,7 +8,7 @@
 import Foundation
 
 struct MealDataModel: Codable {
-    let meals: [Meal]
+    let meals: [Meal]?
 }
 
 struct Meal: Codable {
