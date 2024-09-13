@@ -14,7 +14,7 @@ class MealViewModel: ObservableObject {
         do {
             let responseData = try await NetworkServices.performRequestOperation(url: NetworkConstants.mealUrl, responseType: MealResponseModel.self)
             if let mealsData = responseData.meals {
-                DispatchQueue.main.async {
+                DispatchQueue.main.async {[weak self] in
                     for meal in mealsData {
                         let data = MealViewDataModel(
                             idMeal: meal.idMeal ?? "",
@@ -23,7 +23,7 @@ class MealViewModel: ObservableObject {
                             urlImage: nil
                         )
                         if data.idMeal != "" {
-                            self.meals.append(data)
+                            self?.meals.append(data)
                         }
                     }
                 }
@@ -48,8 +48,8 @@ class MealViewModel: ObservableObject {
             if let url = URL(string: meal.strMealThumb),
                let data = try? Data(contentsOf: url),
                let image = UIImage(data: data) {
-                DispatchQueue.main.async {
-                    self.meals[index].urlImage = image
+                DispatchQueue.main.async {[weak self] in
+                    self?.meals[index].urlImage = image
                 }
             }
         }

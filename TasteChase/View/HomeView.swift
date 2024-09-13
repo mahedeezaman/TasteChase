@@ -22,7 +22,7 @@ struct HomeView: View {
                     LazyVStack(spacing: 10) {
                         ForEach(mealVM.meals) { meal in
                             NavigationLink {
-                                MealRecipeView()
+                                MealRecipeView(meal: meal)
                             } label: {
                                 MealCellView(meal: meal)
                                     .background(Color.gray)
