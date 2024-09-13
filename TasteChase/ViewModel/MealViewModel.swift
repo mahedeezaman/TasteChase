@@ -41,7 +41,13 @@ class MealViewModel: ObservableObject {
         meals[index].fetchTask?.cancel()
         
         meals[index].fetchTask = Task {
-            if let image = await fetchImage(from: meal.strMealThumb) {
+            try? await Task.sleep(nanoseconds: 5 * 100_000_000)
+            if Task.isCancelled {
+                return
+            }
+            if let url = URL(string: meal.strMealThumb),
+               let data = try? Data(contentsOf: url),
+               let image = UIImage(data: data) {
                 DispatchQueue.main.async {
                     self.meals[index].urlImage = image
                 }
@@ -55,16 +61,6 @@ class MealViewModel: ObservableObject {
         }
         meals[index].fetchTask?.cancel()
         meals[index].fetchTask = nil
-    }
-
-    private func fetchImage(from url: String) async -> UIImage? {
-        try? await Task.sleep(nanoseconds: 500_000_000) // Simulate network delay
-        guard let url = URL(string: url),
-              let data = try? Data(contentsOf: url),
-              let image = UIImage(data: data) else {
-            return nil
-        }
-        return image
     }
 }
 

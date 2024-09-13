@@ -23,10 +23,8 @@ struct HomeView: View {
                 }
             }
         }
-        .onAppear {
-            Task {
-                await mealVM.fetchMeals()
-            }
+        .task {
+            await mealVM.fetchMeals()
         }
         .background(Color.black)
         .environmentObject(mealVM)
