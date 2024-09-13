@@ -19,6 +19,7 @@
 		9841FA792C9394D300839B6C /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841FA782C9394D300839B6C /* NetworkServices.swift */; };
 		9841FA7B2C9394F400839B6C /* HTTPErrorModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841FA7A2C9394F400839B6C /* HTTPErrorModels.swift */; };
 		9841FA7F2C93D06200839B6C /* MealViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841FA7E2C93D06200839B6C /* MealViewDataModel.swift */; };
+		9841FA812C93EFCF00839B6C /* MealRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841FA802C93EFCF00839B6C /* MealRecipeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		9841FA782C9394D300839B6C /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
 		9841FA7A2C9394F400839B6C /* HTTPErrorModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPErrorModels.swift; sourceTree = "<group>"; };
 		9841FA7E2C93D06200839B6C /* MealViewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewDataModel.swift; sourceTree = "<group>"; };
+		9841FA802C93EFCF00839B6C /* MealRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			children = (
 				980A4D772C933957000C08C4 /* HomeView.swift */,
 				9841FA722C93537900839B6C /* MealCellView.swift */,
+				9841FA802C93EFCF00839B6C /* MealRecipeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				9830B8B62C9341FD00C3E6ED /* MealResponseModel.swift in Sources */,
 				9841FA762C93914300839B6C /* MealViewModel.swift in Sources */,
 				9830B8B82C93420500C3E6ED /* MealResponseDataModel.swift in Sources */,
+				9841FA812C93EFCF00839B6C /* MealRecipeView.swift in Sources */,
 				9841FA702C934F6300839B6C /* NetworkConstants.swift in Sources */,
 				980A4D782C933957000C08C4 /* HomeView.swift in Sources */,
 				9841FA7B2C9394F400839B6C /* HTTPErrorModels.swift in Sources */,

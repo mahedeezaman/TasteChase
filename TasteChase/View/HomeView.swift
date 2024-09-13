@@ -9,24 +9,37 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var mealVM = MealViewModel()
-
+    
     var body: some View {
-        GeometryReader { gr in
-            ScrollView {
-                LazyVStack(spacing: 10) {
-                    ForEach(mealVM.meals) { meal in
-                        MealCellView(meal: meal)
-                            .background(Color.gray)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .padding(.horizontal)
+        NavigationView {
+            VStack {
+                HStack {
+                    Text("Select a Meal")
+                    Spacer()
+                }
+                .padding()
+                ScrollView {
+                    LazyVStack(spacing: 10) {
+                        ForEach(mealVM.meals) { meal in
+                            NavigationLink {
+                                MealRecipeView()
+                            } label: {
+                                MealCellView(meal: meal)
+                                    .background(Color.gray)
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                                    .padding(.horizontal)
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                        }
                     }
                 }
             }
+            .navigationTitle("")
+            .navigationBarHidden(true)
         }
         .task {
             await mealVM.fetchMeals()
         }
-        .background(Color.black)
         .environmentObject(mealVM)
     }
 }
