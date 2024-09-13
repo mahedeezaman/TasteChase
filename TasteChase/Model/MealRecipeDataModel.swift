@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct MealRecipeDataModel {
     var idMeal : String = ""
@@ -21,4 +22,5 @@ struct MealRecipeDataModel {
     var strImageSource: String = ""
     var strCreativeCommonsConfirmed: String = ""
     var dateModified: String = ""
+    var urlImage : UIImage?
 }
