@@ -41,10 +41,10 @@ class MealViewModel: ObservableObject {
         meals[index].fetchTask?.cancel()
         
         meals[index].fetchTask = Task {
-            try? await Task.sleep(nanoseconds: 5 * 100_000_000)
             if Task.isCancelled {
                 return
             }
+            
             if let url = URL(string: meal.strMealThumb),
                let data = try? Data(contentsOf: url),
                let image = UIImage(data: data) {
