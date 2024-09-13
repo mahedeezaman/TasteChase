@@ -9,16 +9,11 @@ import SwiftUI
 
 struct MealCellView: View {
     let meal: Meal
-    func reloadImage(from url: String) -> UIImage? {
-        guard let imageUrl = URL(string: url),
-              let data = try? Data(contentsOf: imageUrl),
-              let image = UIImage(data: data) else { return nil }
-        return image
-    }
+    @EnvironmentObject var mealVM: MealViewModel
     
     var body: some View {
         HStack {
-            if let image = meal.strMealThumb, let imageUrl = reloadImage(from: image) {
+            if let imageUrl = mealVM.loadImage(from: meal.strMealThumb ?? "") {
                 Image(uiImage: imageUrl)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -43,4 +38,5 @@ struct MealCellView: View {
             idMeal: "52768"
         )
     )
+    .environmentObject(MealViewModel())
 }
