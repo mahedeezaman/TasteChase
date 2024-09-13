@@ -12,13 +12,24 @@ struct MealRecipeView: View {
     let meal : MealViewDataModel
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .onAppear {
-                mealRecipeVM.onAppearValueAssign(meal: meal)
-                Task {
-                    await mealRecipeVM.getRecipe()
+        GeometryReader { gr in
+            ZStack {
+                if mealRecipeVM.isLoading {
+                    ProgressView()
                 }
+                VStack {
+                    Text("Kill")
+                }
+                .disabled(mealRecipeVM.isLoading)
             }
+            .frame(width: gr.size.width, height: gr.size.height)
+        }
+        .onAppear {
+            Task {
+                mealRecipeVM.onAppearValueAssign(meal: meal)
+                await mealRecipeVM.getRecipe()
+            }
+        }
     }
 }
 

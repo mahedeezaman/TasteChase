@@ -9,8 +9,10 @@ import SwiftUI
 
 class MealRecipeViewModel: ObservableObject {
     @Published var mealsRecipe = MealRecipeDataModel()
+    @Published var isLoading = false
     
     func onAppearValueAssign(meal: MealViewDataModel) {
+        self.isLoading = true
         mealsRecipe.idMeal = meal.idMeal
         mealsRecipe.strMeal = meal.strMeal
         mealsRecipe.urlImage = meal.urlImage
@@ -40,8 +42,7 @@ class MealRecipeViewModel: ObservableObject {
                     self?.mealsRecipe.strImageSource = mealsRecipeData.strImageSource ?? ""
                     self?.mealsRecipe.strCreativeCommonsConfirmed = mealsRecipeData.strCreativeCommonsConfirmed ?? ""
                     self?.mealsRecipe.dateModified = mealsRecipeData.dateModified ?? ""
-                    
-                    
+                    self?.mealsRecipe.ingredientAndMeasure = []
                     
                     for (ingredient, measure) in zip(ingredients, measures) {
                         if let ingredient = ingredient, !ingredient.isEmpty,
@@ -50,9 +51,11 @@ class MealRecipeViewModel: ObservableObject {
                         }
                     }
                     print(self?.mealsRecipe ?? [])
+                    self?.isLoading = false
                 }
             }
         } catch {
+            self.isLoading = false
             print("Error fetching Meals Recipe: \(error)")
         }
     }

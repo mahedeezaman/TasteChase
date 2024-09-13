@@ -34,9 +34,9 @@ struct HomeView: View {
                     }
                 }
             }
-            .navigationTitle("")
             .navigationBarHidden(true)
         }
+        .navigationTitle("")
         .task {
             await mealVM.fetchMeals()
         }
