@@ -6,17 +6,14 @@
 //
 
 import Foundation
+import UIKit
 
-struct MealDataModel: Codable {
+struct MealResponseModel: Codable {
     let meals: [Meal]?
 }
 
-struct Meal: Codable, Identifiable {
+struct Meal: Codable {
     let strMeal: String?
     let strMealThumb: String?
     let idMeal: String?
-    
-    var id: String {
-        idMeal ?? UUID().uuidString
-    }
 }
