@@ -14,7 +14,7 @@ struct MealRecipeDataModel {
     var strDrinkAlternate : String = ""
     var strCategory: String = ""
     var strArea : String = ""
-    var strInstructions: String = ""
+    var strInstructions: [String] = []
     var strTags: String = ""
     var strYoutube: String = ""
     var ingredientAndMeasure : [(String, String)] = []

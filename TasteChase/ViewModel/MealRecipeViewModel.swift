@@ -12,7 +12,6 @@ class MealRecipeViewModel: ObservableObject {
     @Published var isLoading = false
     
     func onAppearValueAssign(meal: MealViewDataModel) {
-        self.isLoading = true
         mealsRecipe.idMeal = meal.idMeal
         mealsRecipe.strMeal = meal.strMeal
         mealsRecipe.urlImage = meal.urlImage
@@ -35,7 +34,6 @@ class MealRecipeViewModel: ObservableObject {
                     self?.mealsRecipe.strDrinkAlternate = mealsRecipeData.strDrinkAlternate ?? ""
                     self?.mealsRecipe.strCategory = mealsRecipeData.strCategory ?? ""
                     self?.mealsRecipe.strArea = mealsRecipeData.strArea ?? ""
-                    self?.mealsRecipe.strInstructions = mealsRecipeData.strInstructions ?? ""
                     self?.mealsRecipe.strTags = mealsRecipeData.strTags ?? ""
                     self?.mealsRecipe.strYoutube = mealsRecipeData.strYoutube ?? ""
                     self?.mealsRecipe.strSource = mealsRecipeData.strSource ?? ""
@@ -50,6 +48,13 @@ class MealRecipeViewModel: ObservableObject {
                             self?.mealsRecipe.ingredientAndMeasure.append((ingredient, measure))
                         }
                     }
+                    
+                    let cleanedSteps = (mealsRecipeData.strInstructions ?? "")
+                        .replacingOccurrences(of: ".\r\n",with: ". ")
+                        .replacingOccurrences(of: ".\n",with: ". ")
+                        .replacingOccurrences(of: ".\r",with: ". ")
+                    self?.mealsRecipe.strInstructions = cleanedSteps.components(separatedBy: ". ")
+                    
                     print(self?.mealsRecipe ?? [])
                     self?.isLoading = false
                 }
