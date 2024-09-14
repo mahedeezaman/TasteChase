@@ -14,22 +14,26 @@ struct HomeView: View {
         NavigationView {
             VStack {
                 HStack {
-                    Text("Select a Meal")
-                    Spacer()
+                    Text("Select a Meal for Recipe")
                 }
                 .padding()
+                
                 ScrollView {
-                    LazyVStack(spacing: 10) {
-                        ForEach(mealVM.meals) { meal in
-                            NavigationLink {
-                                MealRecipeView(meal: meal)
-                            } label: {
-                                MealCellView(meal: meal)
-                                    .background(Color.gray)
-                                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                                    .padding(.horizontal)
+                    if mealVM.isLoading {
+                        ProgressView()
+                    } else {
+                        LazyVStack(spacing: 10) {
+                            ForEach(mealVM.meals) { meal in
+                                NavigationLink {
+                                    MealRecipeView(meal: meal)
+                                } label: {
+                                    MealCellView(meal: meal)
+                                        .background(Color.gray)
+                                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                                        .padding(.horizontal)
+                                }
+                                .buttonStyle(PlainButtonStyle())
                             }
-                            .buttonStyle(PlainButtonStyle())
                         }
                     }
                 }
@@ -37,8 +41,11 @@ struct HomeView: View {
             .navigationBarHidden(true)
         }
         .navigationTitle("")
-        .task {
-            await mealVM.fetchMeals()
+        .onAppear {
+            mealVM.isLoading = true
+            Task {
+                await mealVM.fetchMeals()
+            }
         }
         .environmentObject(mealVM)
     }

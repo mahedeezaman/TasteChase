@@ -116,6 +116,9 @@ struct MealRecipeView: View {
                 await mealRecipeVM.getRecipe()
             }
         }
+        .onDisappear {
+            mealRecipeVM.cancelImageFetch()
+        }
     }
 }
 

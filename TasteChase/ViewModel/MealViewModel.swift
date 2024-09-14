@@ -9,6 +9,7 @@ import SwiftUI
 
 class MealViewModel: ObservableObject {
     @Published var meals: [MealViewDataModel] = []
+    @Published var isLoading = false
     
     func fetchMeals() async {
         do {
@@ -26,6 +27,7 @@ class MealViewModel: ObservableObject {
                             self?.meals.append(data)
                         }
                     }
+                    self?.isLoading = false
                 }
             }
         } catch {
