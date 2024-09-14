@@ -14,7 +14,12 @@ class MealRecipeViewModel: ObservableObject {
     func onAppearValueAssign(meal: MealViewDataModel) {
         mealsRecipe.idMeal = meal.idMeal
         mealsRecipe.strMeal = meal.strMeal
+        mealsRecipe.strMealThumb = meal.strMealThumb
         mealsRecipe.urlImage = meal.urlImage
+        
+        if mealsRecipe.urlImage == nil {
+            self.loadImage()
+        }
     }
     
     func getRecipe() async {
@@ -63,5 +68,28 @@ class MealRecipeViewModel: ObservableObject {
             self.isLoading = false
             print("Error fetching Meals Recipe: \(error)")
         }
+    }
+    
+    func loadImage() {
+        mealsRecipe.fetchTask?.cancel()
+        
+        mealsRecipe.fetchTask = Task {
+            if Task.isCancelled {
+                return
+            }
+            
+            if let url = URL(string: mealsRecipe.strMealThumb),
+               let data = try? Data(contentsOf: url),
+               let image = UIImage(data: data) {
+                DispatchQueue.main.async {[weak self] in
+                    self?.mealsRecipe.urlImage = image
+                }
+            }
+        }
+    }
+
+    func cancelImageFetch() {
+        mealsRecipe.fetchTask?.cancel()
+        mealsRecipe.fetchTask = nil
     }
 }

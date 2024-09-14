@@ -11,6 +11,7 @@ import UIKit
 struct MealRecipeDataModel {
     var idMeal : String = ""
     var strMeal : String = ""
+    var strMealThumb: String = ""
     var strDrinkAlternate : String = ""
     var strCategory: String = ""
     var strArea : String = ""
@@ -23,4 +24,5 @@ struct MealRecipeDataModel {
     var strCreativeCommonsConfirmed: String = ""
     var dateModified: String = ""
     var urlImage : UIImage?
+    var fetchTask: Task<Void, Never>?
 }
