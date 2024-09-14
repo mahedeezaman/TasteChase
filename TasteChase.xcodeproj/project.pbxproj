@@ -20,6 +20,7 @@
 		9841FA7B2C9394F400839B6C /* HTTPErrorModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841FA7A2C9394F400839B6C /* HTTPErrorModels.swift */; };
 		9841FA7F2C93D06200839B6C /* MealViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841FA7E2C93D06200839B6C /* MealViewDataModel.swift */; };
 		9841FA812C93EFCF00839B6C /* MealRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841FA802C93EFCF00839B6C /* MealRecipeView.swift */; };
+		98BA6D4B2C9504440034824A /* YoutubeVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA6D4A2C9504440034824A /* YoutubeVideoPlayer.swift */; };
 		98FBA4C52C9460FC00319B8F /* MealRecipeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBA4C42C9460FC00319B8F /* MealRecipeDataModel.swift */; };
 		98FBA4C72C94630700319B8F /* MealRecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBA4C62C94630700319B8F /* MealRecipeViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		9841FA7A2C9394F400839B6C /* HTTPErrorModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPErrorModels.swift; sourceTree = "<group>"; };
 		9841FA7E2C93D06200839B6C /* MealViewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewDataModel.swift; sourceTree = "<group>"; };
 		9841FA802C93EFCF00839B6C /* MealRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipeView.swift; sourceTree = "<group>"; };
+		98BA6D4A2C9504440034824A /* YoutubeVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeVideoPlayer.swift; sourceTree = "<group>"; };
 		98FBA4C42C9460FC00319B8F /* MealRecipeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipeDataModel.swift; sourceTree = "<group>"; };
 		98FBA4C62C94630700319B8F /* MealRecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +120,7 @@
 		9841FA712C93524700839B6C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				98BA6D492C9504380034824A /* ViewComponents */,
 				980A4D772C933957000C08C4 /* HomeView.swift */,
 				9841FA722C93537900839B6C /* MealCellView.swift */,
 				9841FA802C93EFCF00839B6C /* MealRecipeView.swift */,
@@ -140,6 +143,14 @@
 				9841FA782C9394D300839B6C /* NetworkServices.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		98BA6D492C9504380034824A /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				98BA6D4A2C9504440034824A /* YoutubeVideoPlayer.swift */,
+			);
+			path = ViewComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98BA6D4B2C9504440034824A /* YoutubeVideoPlayer.swift in Sources */,
 				9830B8B62C9341FD00C3E6ED /* MealResponseModel.swift in Sources */,
 				9841FA762C93914300839B6C /* MealViewModel.swift in Sources */,
 				98FBA4C52C9460FC00319B8F /* MealRecipeDataModel.swift in Sources */,
