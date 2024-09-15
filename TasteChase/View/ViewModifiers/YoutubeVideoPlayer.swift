@@ -10,9 +10,11 @@ import WebKit
 
 struct YouTubeView: UIViewRepresentable {
     let youTubeurl: String
+    
     func makeUIView(context: Context) ->  WKWebView {
         return WKWebView()
     }
+    
     func updateUIView(_ uiView: WKWebView, context: Context) {
         guard let demoURL = URL(string: youTubeurl) else { return }
         uiView.scrollView.isScrollEnabled = false

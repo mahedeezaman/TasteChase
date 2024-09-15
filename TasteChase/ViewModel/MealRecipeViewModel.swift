@@ -60,7 +60,6 @@ class MealRecipeViewModel: ObservableObject {
                         .replacingOccurrences(of: ".\r",with: ". ")
                     self?.mealsRecipe.strInstructions = cleanedSteps.components(separatedBy: ". ")
                     
-                    print(self?.mealsRecipe ?? [])
                     self?.isLoading = false
                 }
             }
