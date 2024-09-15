@@ -4,12 +4,12 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-        <string>Cera Pro Black Italic.otf</string>
-        <string>Cera Pro Black.otf</string>
-        <string>Cera Pro Bold.otf</string>
-        <string>Cera Pro Light.otf</string>
-        <string>Cera Pro Medium.otf</string>
-        <string>Cera Pro Regular Italic.otf</string>
+		<string>Cera Pro Black Italic.otf</string>
+		<string>Cera Pro Black.otf</string>
+		<string>Cera Pro Bold.otf</string>
+		<string>Cera Pro Light.otf</string>
+		<string>Cera Pro Medium.otf</string>
+		<string>Cera Pro Regular Italic.otf</string>
 	</array>
 </dict>
 </plist>
