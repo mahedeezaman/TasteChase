@@ -43,6 +43,7 @@ struct HomeView: View {
             .background(Color(fromHex: ColorConstants.background))
             .navigationBarHidden(true)
         }
+        .navigationViewStyle(.stack)
         .navigationTitle("")
         .onAppear {
             mealVM.isLoading = true
