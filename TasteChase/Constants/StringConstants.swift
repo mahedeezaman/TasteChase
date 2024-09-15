@@ -16,4 +16,8 @@ struct StringConstants {
     static let imageSource = "Image Source: "
     static let ccConfirmed = "Creative Commons Confirmed: "
     static let dateModified = "Date Modified: "
+    static let drinkAlternate = "Drink Alternate: "
+    static let category = "Category: "
+    static let tags = "Tags: "
+    static let area = "Area: "
 }

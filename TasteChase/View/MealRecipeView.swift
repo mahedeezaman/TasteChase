@@ -42,28 +42,28 @@ struct MealRecipeView: View {
                     
                     VStack(alignment: .leading, spacing: 10) {
                         if !mealRecipeVM.mealsRecipe.strDrinkAlternate.isEmpty {
-                            Text("Drink Alternate: ")
+                            Text(StringConstants.drinkAlternate)
                                 .font(.custom(CeraProFontFamily.bold, size: 18)) +
                             
                             Text("\(mealRecipeVM.mealsRecipe.strDrinkAlternate)")
                                 .font(.custom(CeraProFontFamily.light, size: 18))
                         }
                         if !mealRecipeVM.mealsRecipe.strCategory.isEmpty {
-                            Text("Category: ")
+                            Text(StringConstants.category)
                                 .font(.custom(CeraProFontFamily.bold, size: 18)) +
                             
                             Text("\(mealRecipeVM.mealsRecipe.strCategory)")
                                 .font(.custom(CeraProFontFamily.light, size: 18))
                         }
                         if !mealRecipeVM.mealsRecipe.strTags.isEmpty {
-                            Text("Tags: ")
+                            Text(StringConstants.tags)
                                 .font(.custom(CeraProFontFamily.bold, size: 18)) +
                             
                             Text("\(mealRecipeVM.mealsRecipe.strTags)")
                                 .font(.custom(CeraProFontFamily.light, size: 18))
                         }
                         if !mealRecipeVM.mealsRecipe.strArea.isEmpty {
-                            Text("Area: ")
+                            Text(StringConstants.area)
                                 .font(.custom(CeraProFontFamily.bold, size: 18)) +
                             
                             Text("\(mealRecipeVM.mealsRecipe.strArea)")
