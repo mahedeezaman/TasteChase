@@ -20,7 +20,6 @@
 		9841FA7B2C9394F400839B6C /* HTTPErrorModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841FA7A2C9394F400839B6C /* HTTPErrorModels.swift */; };
 		9841FA7F2C93D06200839B6C /* MealViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841FA7E2C93D06200839B6C /* MealViewDataModel.swift */; };
 		9841FA812C93EFCF00839B6C /* MealRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841FA802C93EFCF00839B6C /* MealRecipeView.swift */; };
-		98A477092C97472D0034D8DB /* BlurBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A477082C97472D0034D8DB /* BlurBackground.swift */; };
 		98A4770B2C9747600034D8DB /* GeneralProgressRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A4770A2C9747600034D8DB /* GeneralProgressRing.swift */; };
 		98A4770D2C97477A0034D8DB /* HexToRGBColour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A4770C2C97477A0034D8DB /* HexToRGBColour.swift */; };
 		98A477172C9748260034D8DB /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 98A4770E2C9748260034D8DB /* .gitkeep */; };
@@ -31,6 +30,8 @@
 		98A4771C2C9748260034D8DB /* Cera Pro Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 98A477132C9748260034D8DB /* Cera Pro Medium.otf */; };
 		98A4771D2C9748260034D8DB /* Cera Pro Regular Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 98A477142C9748260034D8DB /* Cera Pro Regular Italic.otf */; };
 		98A4771E2C9748260034D8DB /* FontFamilyStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A477152C9748260034D8DB /* FontFamilyStructure.swift */; };
+		98A477212C974C9B0034D8DB /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A477202C974C9B0034D8DB /* StringConstants.swift */; };
+		98A477232C97506A0034D8DB /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A477222C97506A0034D8DB /* BlurView.swift */; };
 		98BA6D4B2C9504440034824A /* YoutubeVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA6D4A2C9504440034824A /* YoutubeVideoPlayer.swift */; };
 		98FBA4C52C9460FC00319B8F /* MealRecipeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBA4C42C9460FC00319B8F /* MealRecipeDataModel.swift */; };
 		98FBA4C72C94630700319B8F /* MealRecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBA4C62C94630700319B8F /* MealRecipeViewModel.swift */; };
@@ -52,7 +53,6 @@
 		9841FA7A2C9394F400839B6C /* HTTPErrorModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPErrorModels.swift; sourceTree = "<group>"; };
 		9841FA7E2C93D06200839B6C /* MealViewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewDataModel.swift; sourceTree = "<group>"; };
 		9841FA802C93EFCF00839B6C /* MealRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipeView.swift; sourceTree = "<group>"; };
-		98A477082C97472D0034D8DB /* BlurBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurBackground.swift; sourceTree = "<group>"; };
 		98A4770A2C9747600034D8DB /* GeneralProgressRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralProgressRing.swift; sourceTree = "<group>"; };
 		98A4770C2C97477A0034D8DB /* HexToRGBColour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexToRGBColour.swift; sourceTree = "<group>"; };
 		98A4770E2C9748260034D8DB /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
@@ -63,6 +63,9 @@
 		98A477132C9748260034D8DB /* Cera Pro Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cera Pro Medium.otf"; sourceTree = "<group>"; };
 		98A477142C9748260034D8DB /* Cera Pro Regular Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cera Pro Regular Italic.otf"; sourceTree = "<group>"; };
 		98A477152C9748260034D8DB /* FontFamilyStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontFamilyStructure.swift; sourceTree = "<group>"; };
+		98A4771F2C9749520034D8DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		98A477202C974C9B0034D8DB /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		98A477222C97506A0034D8DB /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		98BA6D4A2C9504440034824A /* YoutubeVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeVideoPlayer.swift; sourceTree = "<group>"; };
 		98FBA4C42C9460FC00319B8F /* MealRecipeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipeDataModel.swift; sourceTree = "<group>"; };
 		98FBA4C62C94630700319B8F /* MealRecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipeViewModel.swift; sourceTree = "<group>"; };
@@ -98,6 +101,7 @@
 		980A4D742C933957000C08C4 /* TasteChase */ = {
 			isa = PBXGroup;
 			children = (
+				98A4771F2C9749520034D8DB /* Info.plist */,
 				98A477162C9748260034D8DB /* Fonts */,
 				9841FA772C9394C700839B6C /* Services */,
 				98A477072C9746D70034D8DB /* Extensions */,
@@ -137,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				9841FA6F2C934F6300839B6C /* NetworkConstants.swift */,
+				98A477202C974C9B0034D8DB /* StringConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -197,7 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				98BA6D4A2C9504440034824A /* YoutubeVideoPlayer.swift */,
-				98A477082C97472D0034D8DB /* BlurBackground.swift */,
+				98A477222C97506A0034D8DB /* BlurView.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -282,7 +287,6 @@
 				98BA6D4B2C9504440034824A /* YoutubeVideoPlayer.swift in Sources */,
 				98A4770D2C97477A0034D8DB /* HexToRGBColour.swift in Sources */,
 				9830B8B62C9341FD00C3E6ED /* MealResponseModel.swift in Sources */,
-				98A477092C97472D0034D8DB /* BlurBackground.swift in Sources */,
 				9841FA762C93914300839B6C /* MealViewModel.swift in Sources */,
 				98FBA4C52C9460FC00319B8F /* MealRecipeDataModel.swift in Sources */,
 				9830B8B82C93420500C3E6ED /* MealRecipeResponseModel.swift in Sources */,
@@ -294,7 +298,9 @@
 				9841FA7B2C9394F400839B6C /* HTTPErrorModels.swift in Sources */,
 				980A4D762C933957000C08C4 /* TasteChaseApp.swift in Sources */,
 				9841FA792C9394D300839B6C /* NetworkServices.swift in Sources */,
+				98A477212C974C9B0034D8DB /* StringConstants.swift in Sources */,
 				9841FA732C93537900839B6C /* MealCellView.swift in Sources */,
+				98A477232C97506A0034D8DB /* BlurView.swift in Sources */,
 				98A4771E2C9748260034D8DB /* FontFamilyStructure.swift in Sources */,
 				9841FA7F2C93D06200839B6C /* MealViewDataModel.swift in Sources */,
 			);
@@ -430,6 +436,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TasteChase/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TasteChase;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -469,6 +476,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TasteChase/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TasteChase;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;

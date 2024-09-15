@@ -13,15 +13,11 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             VStack {
-                HStack {
-                    Text("Select a Meal for Recipe")
-                }
-                .padding()
+                Text(StringConstants.selectMeal)
+                    .font(.custom(CeraProFontFamily.bold, size: 25))
                 
-                ScrollView {
-                    if mealVM.isLoading {
-                        ProgressView()
-                    } else {
+                ZStack {
+                    ScrollView {
                         LazyVStack(spacing: 10) {
                             ForEach(mealVM.meals) { meal in
                                 NavigationLink {
@@ -30,16 +26,22 @@ struct HomeView: View {
                                     MealCellView(meal: meal)
                                         .background(Color.gray)
                                         .clipShape(RoundedRectangle(cornerRadius: 10))
-                                        .padding(.horizontal)
                                 }
                                 .buttonStyle(PlainButtonStyle())
                             }
                         }
                     }
+                    if mealVM.isLoading {
+                        BlurView()
+                            .opacity(0.1)
+                        progressRing()
+                    }
                 }
             }
+            .padding()
             .navigationBarHidden(true)
         }
+        .background(Color.blue)
         .navigationTitle("")
         .onAppear {
             mealVM.isLoading = true
