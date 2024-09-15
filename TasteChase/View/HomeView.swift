@@ -15,6 +15,7 @@ struct HomeView: View {
             VStack {
                 Text(StringConstants.selectMeal)
                     .font(.custom(CeraProFontFamily.bold, size: 25))
+                    .foregroundStyle(Color(fromHex: ColorConstants.title))
                 
                 ZStack {
                     ScrollView {
@@ -24,7 +25,7 @@ struct HomeView: View {
                                     MealRecipeView(meal: meal)
                                 } label: {
                                     MealCellView(meal: meal)
-                                        .background(Color.gray)
+                                        .background(Color(fromHex: ColorConstants.cell))
                                         .clipShape(RoundedRectangle(cornerRadius: 10))
                                 }
                                 .buttonStyle(PlainButtonStyle())
@@ -38,10 +39,10 @@ struct HomeView: View {
                     }
                 }
             }
-            .padding()
+            .padding(20)
+            .background(Color(fromHex: ColorConstants.background))
             .navigationBarHidden(true)
         }
-        .background(Color.blue)
         .navigationTitle("")
         .onAppear {
             mealVM.isLoading = true

@@ -108,6 +108,7 @@ struct MealRecipeView: View {
             }
             .disabled(mealRecipeVM.isLoading)
         }
+        .background(Color(fromHex: ColorConstants.background))
         .navigationBarTitle("", displayMode: .inline)
         .onAppear {
             mealRecipeVM.isLoading = true

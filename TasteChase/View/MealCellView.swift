@@ -19,11 +19,17 @@ struct MealCellView: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 80, height: 80)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(Color(fromHex: ColorConstants.primaryText), lineWidth: 2)
+                    )
             } else {
-                ProgressView()
+                progressRing()
                     .frame(width: 80, height: 80)
             }
             Text(meal.strMeal)
+                .font(.custom(CeraProFontFamily.medium, size: 18))
+                .foregroundStyle(Color(fromHex: ColorConstants.primaryText))
             Spacer()
         }
         .padding()

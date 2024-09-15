@@ -32,6 +32,7 @@
 		98A4771E2C9748260034D8DB /* FontFamilyStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A477152C9748260034D8DB /* FontFamilyStructure.swift */; };
 		98A477212C974C9B0034D8DB /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A477202C974C9B0034D8DB /* StringConstants.swift */; };
 		98A477232C97506A0034D8DB /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A477222C97506A0034D8DB /* BlurView.swift */; };
+		98A477252C9759320034D8DB /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A477242C9759320034D8DB /* ColorConstants.swift */; };
 		98BA6D4B2C9504440034824A /* YoutubeVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA6D4A2C9504440034824A /* YoutubeVideoPlayer.swift */; };
 		98FBA4C52C9460FC00319B8F /* MealRecipeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBA4C42C9460FC00319B8F /* MealRecipeDataModel.swift */; };
 		98FBA4C72C94630700319B8F /* MealRecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FBA4C62C94630700319B8F /* MealRecipeViewModel.swift */; };
@@ -66,6 +67,7 @@
 		98A4771F2C9749520034D8DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		98A477202C974C9B0034D8DB /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		98A477222C97506A0034D8DB /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		98A477242C9759320034D8DB /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 		98BA6D4A2C9504440034824A /* YoutubeVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeVideoPlayer.swift; sourceTree = "<group>"; };
 		98FBA4C42C9460FC00319B8F /* MealRecipeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipeDataModel.swift; sourceTree = "<group>"; };
 		98FBA4C62C94630700319B8F /* MealRecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipeViewModel.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			children = (
 				9841FA6F2C934F6300839B6C /* NetworkConstants.swift */,
 				98A477202C974C9B0034D8DB /* StringConstants.swift */,
+				98A477242C9759320034D8DB /* ColorConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				98BA6D4B2C9504440034824A /* YoutubeVideoPlayer.swift in Sources */,
 				98A4770D2C97477A0034D8DB /* HexToRGBColour.swift in Sources */,
 				9830B8B62C9341FD00C3E6ED /* MealResponseModel.swift in Sources */,
+				98A477252C9759320034D8DB /* ColorConstants.swift in Sources */,
 				9841FA762C93914300839B6C /* MealViewModel.swift in Sources */,
 				98FBA4C52C9460FC00319B8F /* MealRecipeDataModel.swift in Sources */,
 				9830B8B82C93420500C3E6ED /* MealRecipeResponseModel.swift in Sources */,
