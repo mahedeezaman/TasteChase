@@ -1,4 +1,4 @@
-# CurrencyConverter
+# Taste Chase
 Taste Chase is a native iOS application dedicated to dessert lovers. Designed with simplicity and ease of use in mind, the app allows users to explore a wide variety of dessert recipes. By integrating with the TheMealDB API, Taste Chase offers a comprehensive and engaging way to discover, view, and enjoy sweet treats from around the world.
 
 With Taste Chase, you can:
